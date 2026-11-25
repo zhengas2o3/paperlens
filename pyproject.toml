@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperlens"
+version = "0.1.0"
+description = "Turn arXiv search results into clean Markdown literature digests, from the command line."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Ruizhao Zheng" },
+]
+keywords = ["arxiv", "literature", "digest", "markdown", "cli", "research"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.scripts]
+paperlens = "paperlens.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/zhengas2o3/paperlens"
+
+[tool.setuptools.packages.find]
+include = ["paperlens*"]
